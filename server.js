@@ -1,23 +1,18 @@
 const express = require('express');
 const cors = require('cors');
+const dotenv = require('dotenv');
+const connectDB = require('./config/db');
+const dnaRoutes = require('./routes/DnaRoutes');
+
 const app = express();
+dotenv.config();
 
 app.use(cors());
 app.use(express.json());
 
-const isMutant = (dna) => {
-    console.log("dna->" , dna);
-    return true;
-};
+connectDB();
 
-app.post('/mutant/', (req, res) => {
-    const { dna } = req.body;
-    if (isMutant(dna)) {
-        res.status(200).send('Es un mutante');
-    } else {
-        res.status(403).send('No es un mutante');
-    }
-});
+app.use('/', dnaRoutes);
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
