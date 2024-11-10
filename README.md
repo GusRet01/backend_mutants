@@ -34,7 +34,7 @@ Para usar la aplicación, sigue estos pasos:
  }
 3. Presiona el botón **"Enviar JSON"**.
 
-   - La aplicación enviará una solicitud al endpoint [`/mutant/`](https://backend-mutants.vercel.app/mutant/) del backend para verificar si el ADN pertenece a un mutante.
+   - La aplicación enviará una solicitud al endpoint `(https://backend-mutants.vercel.app/mutant/)` del backend para verificar si el ADN pertenece a un mutante.
 
 ### Cargar Estadísticas
 
