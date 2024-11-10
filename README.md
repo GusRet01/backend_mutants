@@ -150,4 +150,4 @@ Haz clic en Send para enviar la solicitud.
 Configura el método a GET y la URL a http://localhost:3000/stats/. Haz clic en Send para enviar la solicitud.
 
 
-# Gracias por ayudar a detectar mutantes!
+Gracias por ayudar a detectar mutantes!
