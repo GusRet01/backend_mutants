@@ -10,18 +10,18 @@ La aplicación permite cargar un archivo JSON con la secuencia de ADN y determin
 
 El proyecto está estructurado de la siguiente manera:
 
-backend-mutants/
-├── config/       
-│   └── db.js     # Archivo de configuración de la base de datos
-├── controllers/  # Controladores de las rutas
-├── models/       # Definición de modelos de datos (schemas de MongoDB)
-├── routes/       # Definición de rutas y controladores
-├── services/     # Servicios de negocio y lógica de la aplicación
-├── .env          # Variables de entorno
-├── .gitignore    # Archivos y carpetas ignorados por Git
-├── package.json  # Configuración del proyecto y dependencias
-├── server.js     # Configuración y arranque del servidor
-└── vercel.json   # Configuración de Vercel
+- backend-mutants/
+  - config/
+     - db.js       # Archivo de configuración de la base de datos
+  -  controllers/  # Controladores de las rutas
+  -  models/       # Definición de modelos de datos (schemas de MongoDB)
+  -  routes/       # Definición de rutas y controladores
+  -  services/     # Servicios de negocio y lógica de la aplicación
+  -  .env          # Variables de entorno
+  -  .gitignore    # Archivos y carpetas ignorados por Git
+  -  package.json  # Configuración del proyecto y dependencias
+  -  server.js     # Configuración y arranque del servidor
+  -  vercel.json   # Configuración de Vercel
 
 ## Uso de la Aplicación
 
@@ -60,7 +60,7 @@ Para ver las estadísticas de las secuencias de ADN verificadas:
 }
 ```
 
-### Verificar ADN Mutante 
+### Estadisticas de ADN verificadas 
 
 **Endpoint**: `GET [https://backend-mutants.vercel.app/stats/]`
 
@@ -129,7 +129,7 @@ Para iniciar el servidor localmente, ejecuta el siguiente comando en la terminal
 
 npm run dev
 
-El servidor se iniciará y estará listo para recibir solicitudes en http://localhost:3000.
+El servidor se iniciará y estará listo para recibir solicitudes en http://localhost:3001.
 
 ## Usar Postman para Hacer Solicitudes
 
@@ -137,7 +137,7 @@ Puedes utilizar Postman para realizar solicitudes a los endpoints de tu servidor
 
 ### Verificar ADN Mutante
 
-Configura el método a POST y la URL a http://localhost:3000/mutant/. En la pestaña Body, selecciona raw y JSON. Ingresa el siguiente JSON:
+Configura el método a POST y la URL a http://localhost:3001/mutant/. En la pestaña Body, selecciona raw y JSON. Ingresa el siguiente JSON:
 
 {
   "dna": ["ATGCGA", "CAGTGC", "TTATGT", "AGAAGG", "CACCTA", "TCACTG"]
@@ -147,7 +147,7 @@ Haz clic en Send para enviar la solicitud.
 
 ### Obtener Estadísticas
 
-Configura el método a GET y la URL a http://localhost:3000/stats/. Haz clic en Send para enviar la solicitud.
+Configura el método a GET y la URL a http://localhost:3001/stats/. Haz clic en Send para enviar la solicitud.
 
 
 Gracias por ayudar a detectar mutantes!
